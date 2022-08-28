@@ -5,6 +5,8 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import { Cart, Home, Products } from "./Pages/index";
 
+import "./App.css";
+
 function App() {
   return (
     <Main>
@@ -15,7 +17,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </Main>
-
   );
 }
 
