@@ -1,13 +1,26 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-
+import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
-
+import { Cart, Home, Products } from "./Pages/index";
 
 function App() {
   return (
     <Main>
-      test
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products/:id" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </Main>
+
+  );
+}
+
+export default App;
+
     // <main>
     //   <header>
     //     90s shop
@@ -76,7 +89,3 @@ function App() {
     //     )
     //   }
     // </main>
-  );
-}
-
-export default App;

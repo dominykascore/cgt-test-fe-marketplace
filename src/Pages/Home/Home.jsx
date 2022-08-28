@@ -6,7 +6,7 @@ import c from "./Home.module.scss";
 function Home(props) {
     return (
         <div>
-            
+            hi
         </div>
     );
 }
