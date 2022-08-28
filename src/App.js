@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
@@ -8,11 +8,29 @@ import { Cart, Home, Products } from "./Pages/index";
 import "./App.css";
 
 function App() {
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      name: "a Space Man",
+      price: 1000000,
+      image: "/images/a.jpg",
+    },
+    {
+      id: 2,
+      name: "a Friendly Alien",
+      price: 1000000,
+      image: "/images/b.jpg",
+    },
+  ]);
+
+  const [currentProduct, setCurrentProduct] = useState(null);
+
+  const [cart, setCart] = useState([]);
   return (
     <Main>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home products={products} setCurrentProduct={setCurrentProduct}/>} />
         <Route path="/products/:id" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
