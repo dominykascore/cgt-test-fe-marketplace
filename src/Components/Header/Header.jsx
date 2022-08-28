@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import c from "./Header.module.scss";
 
-function Header(props) {
+function Header({cart}) {
   return (
     <header className={c.header}>
       <div className={"container"}>
@@ -24,6 +24,7 @@ function Header(props) {
                   alt="shoppingCart"
                   width="50"
                 />
+                <span data-testid="cartCount" className={cart.length ? c.exists : ''}>{cart.length ? cart.length : ''}</span>
               </Link>
             </li>
           </ul>

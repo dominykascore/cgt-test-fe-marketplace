@@ -28,7 +28,7 @@ function App() {
   const [cart, setCart] = useState([]);
   return (
     <Main>
-      <Header />
+      <Header cart={cart} />
       <Routes>
         <Route
           path="/"
