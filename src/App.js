@@ -46,7 +46,7 @@ function App() {
             />
           }
         />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
     </Main>
   );
