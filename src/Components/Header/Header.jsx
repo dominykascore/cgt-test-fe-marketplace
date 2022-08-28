@@ -15,12 +15,16 @@ function Header(props) {
               </Link>
             </li>
             <li>
-                <Link to='/'>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className={c.cart}>
-                <Link to="/cart">
-                        <img src="/images/shopping-cart.svg" alt="shoppingCart" width="50"/>
-                </Link>
+              <Link to="/cart">
+                <img
+                  src="/images/shopping-cart.svg"
+                  alt="shoppingCart"
+                  width="50"
+                />
+              </Link>
             </li>
           </ul>
         </nav>
